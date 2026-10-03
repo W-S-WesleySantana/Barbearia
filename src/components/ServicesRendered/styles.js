@@ -22,6 +22,11 @@ export const NamePriceDescription = styled.div`
     gap: 10px;
     color: #000;
     max-height: 70vh;
+    width: 100%;
+
+
+
+ 
    
     
 
@@ -40,76 +45,88 @@ export const NamePriceDescription = styled.div`
     background: #e2e1e1;
   }
 
-
-   
-`
-
-export const IconeNaTela = styled.div`
-
-border: 1px solid rgb(234, 234, 234);
-background-color:rgb(252, 251, 251);
-border-radius:10px ;
-padding: 20px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-
-
-
-
-h3{
-   margin-bottom: 15px;
-}
-
-button{
-   width: 12vw;
-   height: 5vh;
-   border-radius: 10px;
-   border: none;
-   background: black;
-   color: white;
-   font-weight: 700;
-   cursor: pointer;
-
-   &:hover{
-    background: #818181;
-    color: #000;
-   }
-
+  @media (max-width: 500px) {
+    max-width: 400px;
   }
 
 
+   
+`
+
+
+export const IconeNaTela = styled.div`
+  border: 1px solid rgb(234, 234, 234);
+  background-color: rgb(252, 251, 251);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 16px; 
+
+ 
+
+  
+  > div {
+    flex: 1;
+    min-width: 0; 
+  }
+
+  h3 {
+    margin-bottom: 8px; 
+  }
+
+  button {
+   
+    width: 140px; 
+    height: 44px; 
+    border-radius: 10px;
+    border: none;
+    background: black;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0; 
+    padding: 0 16px;
+
+    &:hover {
+      background: #818181;
+      color: #000;
+    }
+  }
+
   @media (max-width: 500px) {
     
-    p{
-   
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 
-      width: 80%;
-      margin: 5px 0;
+    button {
+      width: 100%; 
     }
+  }
+`;
 
-    button{
-    
-      width: 20vw;
-    }
-    
+export const Description = styled.p`
+  font-size: 1rem; 
+  background-color: #f9f9f9;
+  margin-bottom: 12px;
+  word-break: break-word; 
+  color: #555;
+`;
 
-}
 
-
-
-`
 
 export const ButaoScheduling = styled.div`
   text-align: right;
   margin-top: 10px;
 `;
 
-export const ServicePrice = styled.span`
+export const ServicePrice = styled.div`
   font-size: 20px;
   font-weight: bold;
-  color:rgb(17, 63, 5);
+  color:rgb(12, 42, 5);
 
 `;
 

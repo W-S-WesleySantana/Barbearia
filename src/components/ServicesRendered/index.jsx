@@ -13,7 +13,8 @@ import {
   FormGroup,
   ButtonContainer,
   BotaoFechar,
-  BotaoEnviar
+  BotaoEnviar,
+  Description
 } from "./styles.js";
 
 export default function Servicos() {
@@ -129,13 +130,21 @@ export default function Servicos() {
               <IconeNaTela key={item.id || index}>
                 <div>
                   <h3>{item.nome}</h3>
-              
-                  <p>{textoDescricao || "Sem descrição informada."}</p>
+                  
+                  
 
-                  <ServicePrice>R\$ {item.preco}</ServicePrice>
+                  <Description>
+                    
+                    {textoDescricao || "Sem descrição informada."}
+
+                  </Description>
+ 
+               
+
+                  <ServicePrice>R$ {item.preco}</ServicePrice>
                 </div>
 
-                <ButaoScheduling>
+                <ButaoScheduling> 
                  
                   <button onClick={() => lidarComCliqueAgendar(item)}>Agendar</button>
                 </ButaoScheduling>
